@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HandBrawl</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body class=" bg-[#E0D8DE]">
+    <nav class="bg-[#6A6262] py-4 m-6">
+      <div class="grid grid-cols-2 items-center max-w-4xl mx-auto px-4">
+        <h2 class="text-white text-xl font-semibold">HandBrawl</h2>
+
+        <div class="flex justify-end gap-6 text-white">
+          <a href="#" class="hover:text-amber-400">Home</a>
+          <a href="#" class="hover:text-amber-400">About</a>
+        </div>
+      </div>
+    </nav>
+    <section class="h-full">
+        <h2 class="mt-5 text-3xl md:text-5xl flex justify-center items-center w-full font-extrabold">ROCK-PAPER-SCISSOR</h2>
+      <div class="grid grid-cols-3 gap-5 m-10">
+        <div class="border-2 rounded-full flex justify-center items-center bg-[#9C9990] cursor-pointer hover:  choice" id="rock">
+            <img src="../assets/Rock.png" class="w-[250px] h-[250px] md:w-[300px] md:h-[300px] p-3 object-cover">
+        </div>
+        <div class="border-2 flex rounded-full justify-center items-center bg-[#9C9990] choice" id="paper">
+            <img src="../assets/paper.png" class="w-[250px] h-[250px] md:w-[300px] md:h-[300px] p-3 object-cover">
+        </div>
+        <div class="border-2 flex  rounded-full justify-center items-center bg-[#9C9990] choice" id="scissors">
+            <img src="../assets/sc.png" class="w-[250px] h-[250px] md:w-[300px] md:h-[300px] p-3 object-cover">
+        </div>
+      </div>
+      <div class="bg-[#CFD2B2] grid grid-cols-2 m-6 gap-28">
+        <div class="m-4">
+            <h3 class="font-bold text-3xl pl-12 m-3">User</h3>
+            <p id="user-score text-lg" class="pl-20 mb-4">0</p>
+
+        </div>
+        <div class="m-4">
+            <h3 class="font-bold text-3xl pl-12 m-3"> Computer</h3>
+            <p id="computer-score text-lg " class="pl-30 mb-4">0</p>
+        </div>
+      </div>
+      <div class="mt-12">
+        <h3 id="result">Play Your Move</h3>
+        <h2 id="final-result"></h2>
+
+      </div>
+      <div>
+        <button type="submit" id="play-again"  class="">Play Again</button>
+      </div>
+    </section>
+    <script src="../gameLogic.js"></script>
+  </body>
+</html>
