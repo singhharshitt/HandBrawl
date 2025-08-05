@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - HandBrawl</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Libertinus+Mono&family=Mozilla+Headline:wght@200..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Bitter Bold */
+    .bitter-bold {
+      font-family: "Bitter", serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    /* Bitter Regular */
+    .bitter-regular {
+      font-family: "Bitter", serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    /* Open Sans SemiBold */
+    .open-sans-semibold {
+      font-family: "Open Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
+
+    /* Open Sans Light */
+    .open-sans-light {
+      font-family: "Open Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
+
+    /* Libertinus Mono Regular */
+    .libertinus-mono-regular {
+      font-family: "Libertinus Mono", monospace;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    /* Nunito ExtraBold */
+    .nunito-extrabold {
+      font-family: "Nunito", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 800;
+      font-style: normal;
+    }
+
+    /* Nunito Light */
+    .nunito-light {
+      font-family: "Nunito", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    /* Winky Rough Bold */
+    .winky-rough-bold {
+      font-family: "Winky Rough", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 900;
+      font-style: normal;
+    }
+
+    /* Winky Rough Regular */
+    .winky-rough-regular {
+      font-family: "Winky Rough", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    /* Mozilla Headline Medium */
+    .mozilla-headline-medium {
+      font-family: "Mozilla Headline", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 800;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
+
+    /* Mozilla Headline Light */
+    .mozilla-headline-light {
+      font-family: "Mozilla Headline", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
+
+    .rowdies-light {
+      font-family: "Rowdies", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    .rowdies-regular {
+      font-family: "Rowdies", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .rowdies-bold {
+      font-family: "Rowdies", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+    }
+
+    /* About page specific styles */
+    .about-card {
+      background: linear-gradient(135deg, #CFD2B2 0%, #E0D8DE 100%);
+      border: 2px solid #9C9990;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .about-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      background: #9C9990;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+
+<body class="bg-[#E0D8DE] min-h-screen">
+  <nav class="bg-[#6A6262] py-4 mt-4 mx-6 lg:mt-4 lg:mx-32 md:mt-4 md:mx-12 rounded-3xl">
+    <div class="grid grid-cols-2 items-center max-w-4xl mx-auto px-5">
+      <h2 class="text-white text-xl font-semibold winky-rough-bold">HandBrawl</h2>
+
+      <div class="flex justify-end gap-6 text-white nunito-extrabold">
+        <a href="home.html" class="hover:text-amber-400 transition-colors">Home</a>
+        <a href="about.html" class="text-amber-400 border-b-2 border-amber-400">About</a>
+      </div>
+    </div>
+  </nav>
+  
+  <main class="container mx-auto px-6 py-12">
+    <!-- Hero Section -->
+    <section class="text-center mb-16">
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold rowdies-bold mb-6">
+        About <span class="border-b-4 border-[#9C9990]">HandBrawl</span>
+      </h1>
+      <p class="text-xl md:text-2xl nunito-light text-gray-700 max-w-3xl mx-auto ">
+        A modern, interactive Rock-Paper-Scissors game that brings the classic game to life with stunning visuals and smooth gameplay.
+      </p>
+    </section>
+
+    <!-- Game Description -->
+    <section class="mb-16">
+      <div class="about-card rounded-3xl p-8 md:p-12">
+        <h2 class="text-3xl md:text-4xl font-bold mozilla-headline-medium mb-6 text-center">
+          The Game
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8 items-center nunito-light">
+          <div>
+            <p class="text-lg nunito-light leading-relaxed mb-6">
+              HandBrawl is more than just a simple Rock-Paper-Scissors game. It's a carefully crafted experience that combines classic gameplay with modern web technologies. The game features a best-of-three format, ensuring each match is exciting and competitive.
+            </p>
+            <p class="text-lg nunito-light leading-relaxed mb-6">
+              With its responsive design, HandBrawl works seamlessly across all devices - from mobile phones to desktop computers. The intuitive interface makes it easy for players of all ages to jump in and start playing immediately.
+            </p>
+            <p class="text-lg nunito-light leading-relaxed">
+              The game includes real-time score tracking, visual feedback for player choices, and smooth animations that enhance the overall gaming experience.
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="grid grid-cols-3 gap-4 max-w-xs mx-auto">
+              <div class="w-20 h-20 md:w-24 md:h-24 border-2 rounded-full flex justify-center items-center bg-[#9C9990]">
+                <img src="../assets/Rock.png" class="w-12 h-12 md:w-16 md:h-16 object-contain" />
+              </div>
+              <div class="w-20 h-20 md:w-24 md:h-24 border-2 rounded-full flex justify-center items-center bg-[#9C9990]">
+                <img src="../assets/paper.png" class="w-12 h-12 md:w-16 md:h-16 object-contain" />
+              </div>
+              <div class="w-20 h-20 md:w-24 md:h-24 border-2 rounded-full flex justify-center items-center bg-[#9C9990]">
+                <img src="../assets/sc.png" class="w-12 h-12 md:w-16 md:h-16 object-contain" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mozilla-headline-medium mb-12 text-center">
+        Key Features
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="about-card rounded-2xl p-6 text-center">
+          
+          <h3 class="text-xl font-bold nunito-extrabold mb-3">Interactive Gameplay</h3>
+          <p class="nunito-light">Smooth animations and visual feedback make every move feel satisfying and responsive.</p>
+        </div>
+        <div class="about-card rounded-2xl p-6 text-center">
+          
+          <h3 class="text-xl font-bold nunito-extrabold mb-3">Responsive Design</h3>
+          <p class="nunito-light">Optimized for all devices, from mobile phones to desktop computers.</p>
+        </div>
+        <div class="about-card rounded-2xl p-6 text-center">
+          
+          <h3 class="text-xl font-bold nunito-extrabold mb-3">Best of 3 Rounds</h3>
+          <p class="nunito-light">Competitive format that keeps games exciting and engaging.</p>
+        </div>
+        <div class="about-card rounded-2xl p-6 text-center">
+          
+          <h3 class="text-xl font-bold nunito-extrabold mb-3">Modern UI</h3>
+          <p class="nunito-light">Beautiful design with Tailwind CSS and custom animations.</p>
+        </div>
+        <div class="about-card rounded-2xl p-6 text-center">
+          
+          <h3 class="text-xl font-bold nunito-extrabold mb-3">Play Again</h3>
+          <p class="nunito-light">Quick restart functionality to keep the fun going.</p>
+        </div>
+        <div class="about-card rounded-2xl p-6 text-center">
+         
+          <h3 class="text-xl font-bold nunito-extrabold mb-3">Fast Performance</h3>
+          <p class="nunito-light">Built with Vite for lightning-fast development and deployment.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="mb-16">
+      <div class="about-card rounded-3xl p-8 md:p-12">
+        <h2 class="text-3xl md:text-4xl font-bold mozilla-headline-medium mb-8 text-center">
+          Technology Stack
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="text-center p-4">
+            <div class="text-4xl mb-3">🌐</div>
+            <h3 class="font-bold nunito-extrabold mb-2">HTML5</h3>
+            <p class="nunito-light text-sm">Semantic markup and modern web standards</p>
+          </div>
+          <div class="text-center p-4">
+            <div class="text-4xl mb-3">🎨</div>
+            <h3 class="font-bold nunito-extrabold mb-2">Tailwind CSS</h3>
+            <p class="nunito-light text-sm">Utility-first CSS framework for rapid UI development</p>
+          </div>
+          <div class="text-center p-4">
+            <div class="text-4xl mb-3">⚡</div>
+            <h3 class="font-bold nunito-extrabold mb-2">JavaScript</h3>
+            <p class="nunito-light text-sm">ES6+ features for interactive game logic</p>
+          </div>
+          <div class="text-center p-4">
+            <div class="text-4xl mb-3">🚀</div>
+            <h3 class="font-bold nunito-extrabold mb-2">Vite</h3>
+            <p class="nunito-light text-sm">Next-generation frontend build tool</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Designer Section -->
+    <section class="mb-16">
+      <div class="about-card rounded-3xl p-8 md:p-12 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mozilla-headline-medium mb-8">
+          Designed & Developed By
+        </h2>
+        <div class="max-w-md mx-auto">
+          <div class="w-32 h-32 bg-[#9C9990] rounded-full mx-auto mb-6 flex items-center justify-center">
+            <span class="text-4xl">👨‍💻</span>
+          </div>
+          <h3 class="text-2xl font-bold nunito-extrabold mb-3">Harshit Singh</h3>
+          <p class="text-lg nunito-light mb-6">
+            A passionate frontend developer who loves creating interactive and engaging web experiences.
+          </p>
+          <div class="flex justify-center gap-4">
+            <div class="text-center">
+              
+              <p class="nunito-light text-sm">Frontend Development</p>
+            </div>
+            <div class="text-center">
+            
+              <p class="nunito-light text-sm">UI/UX Design</p>
+            </div>
+            <div class="text-center">
+              
+              <p class="nunito-light text-sm">Performance</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="text-center">
+      <div class="about-card rounded-3xl p-8 md:p-12">
+        <h2 class="text-3xl md:text-4xl font-bold mozilla-headline-medium mb-6">
+          Ready to Play?
+        </h2>
+        <p class="text-lg nunito-light mb-8 max-w-2xl mx-auto">
+          Experience the excitement of HandBrawl for yourself. Challenge the computer in this modern take on the classic Rock-Paper-Scissors game!
+        </p>
+        <a href="home.html" class="inline-block bg-amber-700 text-white px-8 py-4 rounded-2xl font-bold nunito-extrabold hover:bg-amber-800 transition-colors text-lg">
+          Start Playing Now
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#6A6262] text-white py-8 mt-16">
+    <div class="container mx-auto px-6 text-center">
+      <p class="nunito-light">
+        © 2025 HandBrawl. Designed by Harshit Singh
+      </p>
+    </div>
+  </footer>
+</body>
+</html> 

@@ -1,58 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HandBrawl</title>
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Libertinus+Mono&family=Mozilla+Headline:wght@200..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-  </head>
-  <body class=" bg-[#E0D8DE]">
-    <nav class="bg-[#6A6262] py-4 m-6">
-      <div class="grid grid-cols-2 items-center max-w-4xl mx-auto px-4">
-        <h2 class="text-white text-xl font-semibold">HandBrawl</h2>
 
-        <div class="flex justify-end gap-6 text-white">
-          <a href="#" class="hover:text-amber-400">Home</a>
-          <a href="#" class="hover:text-amber-400">About</a>
-        </div>
-      </div>
-    </nav>
-    <section class="h-full">
-        <h2 class="mt-5 text-3xl md:text-5xl flex justify-center items-center w-full font-extrabold">ROCK-PAPER-SCISSOR</h2>
-      <div class="grid grid-cols-3 gap-5 m-10">
-        <div class="border-2 rounded-full flex justify-center items-center bg-[#9C9990] cursor-pointer hover:  choice" id="rock">
-            <img src="../assets/Rock.png" class="w-[250px] h-[250px] md:w-[300px] md:h-[300px] p-3 object-cover">
-        </div>
-        <div class="border-2 flex rounded-full justify-center items-center bg-[#9C9990] choice" id="paper">
-            <img src="../assets/paper.png" class="w-[250px] h-[250px] md:w-[300px] md:h-[300px] p-3 object-cover">
-        </div>
-        <div class="border-2 flex  rounded-full justify-center items-center bg-[#9C9990] choice" id="scissors">
-            <img src="../assets/sc.png" class="w-[250px] h-[250px] md:w-[300px] md:h-[300px] p-3 object-cover">
-        </div>
-      </div>
-      <div class="bg-[#CFD2B2] grid grid-cols-2 m-6 gap-28">
-        <div class="m-4">
-            <h3 class="font-bold text-3xl pl-12 m-3">User</h3>
-            <p id="user-score text-lg" class="pl-20 mb-4">0</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HandBrawl</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Libertinus+Mono&family=Mozilla+Headline:wght@200..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
 
-        </div>
-        <div class="m-4">
-            <h3 class="font-bold text-3xl pl-12 m-3"> Computer</h3>
-            <p id="computer-score text-lg " class="pl-30 mb-4">0</p>
-        </div>
-      </div>
-      <div class="mt-12">
-        <h3 id="result">Play Your Move</h3>
-        <h2 id="final-result"></h2>
+  <style>
+    /* Bitter Bold */
+    .bitter-bold {
+      font-family: "Bitter", serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+    }
 
+    /* Bitter Regular */
+    .bitter-regular {
+      font-family: "Bitter", serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    /* Open Sans SemiBold */
+    .open-sans-semibold {
+      font-family: "Open Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
+
+    /* Open Sans Light */
+    .open-sans-light {
+      font-family: "Open Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
+
+    /* Libertinus Mono Regular */
+    .libertinus-mono-regular {
+      font-family: "Libertinus Mono", monospace;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    /* Nunito ExtraBold */
+    .nunito-extrabold {
+      font-family: "Nunito", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 800;
+      font-style: normal;
+    }
+
+    /* Nunito Light */
+    .nunito-light {
+      font-family: "Nunito", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    /* Winky Rough Bold */
+    .winky-rough-bold {
+      font-family: "Winky Rough", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 900;
+      font-style: normal;
+    }
+
+    /* Winky Rough Regular */
+    .winky-rough-regular {
+      font-family: "Winky Rough", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    /* Mozilla Headline Medium */
+    .mozilla-headline-medium {
+      font-family: "Mozilla Headline", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 800;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
+
+    /* Mozilla Headline Light */
+    .mozilla-headline-light {
+      font-family: "Mozilla Headline", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
+
+    .rowdies-light {
+      font-family: "Rowdies", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    .rowdies-regular {
+      font-family: "Rowdies", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .rowdies-bold {
+      font-family: "Rowdies", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+    }
+
+    /* Game-specific styles */
+    .choice-selected {
+      transform: scale(1.1);
+      border-color: #f59e0b;
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+    }
+
+    .game-disabled {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+
+<body class="bg-[#E0D8DE]">
+  <nav class="bg-[#6A6262] py-4 mt-4 mx-6 lg:mt-4 lg:mx-32 md:mt-4 md:mx-12 rounded-3xl">
+    <div class="grid grid-cols-2 items-center max-w-4xl mx-auto px-5">
+      <h2 class="text-white text-xl font-semibold winky-rough-bold">HandBrawl</h2>
+
+      <div class="flex justify-end gap-6 text-white nunito-extrabold">
+        <a href="home.html" class="text-amber-400 border-b-2 border-amber-400">Home</a>
+        <a href="about.html" class="hover:text-amber-400 transition-colors">About</a>
       </div>
-      <div>
-        <button type="submit" id="play-again"  class="">Play Again</button>
+    </div>
+  </nav>
+  
+  <section class="h-full">
+    <h2 class="my-12 md:my-16 lg:my-20 text-4xl md:text-5xl lg:text-6xl text-center font-extrabold rowdies-bold">
+      R<span class="border-b-4 border-[#9C9990]">OCK-PAPER-SCISSOR</span>S
+    </h2>
+    
+    <div class="grid grid-cols-3 gap-x-2 md:gap-x-4 lg:gap-x-6 w-full px-4 md:px-8 lg:px-12 place-items-center mb-8">
+      <!-- ROCK -->
+      <div class="w-32 h-32 md:w-36 md:h-36 lg:w-44 lg:h-44 border-2 rounded-full flex justify-center items-center bg-[#9C9990] cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out choice" id="rock">
+        <img src="../assets/Rock.png" class="w-20 h-20 md:w-24 md:h-24 lg:h-36 lg:w-36 object-contain" />
       </div>
-    </section>
-    <script src="../gameLogic.js"></script>
-  </body>
+
+      <!-- PAPER -->
+      <div class="w-32 h-32 md:w-36 md:h-36 lg:w-44 lg:h-44 border-2 rounded-full flex justify-center items-center bg-[#9C9990] cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out choice" id="paper">
+        <img src="../assets/paper.png" class="w-20 h-20 md:w-24 md:h-24 lg:h-36 lg:w-36 object-contain" />
+      </div>
+
+      <!-- SCISSORS -->
+      <div class="w-32 h-32 md:w-36 md:h-36 lg:w-44 lg:h-44 border-2 rounded-full flex justify-center items-center bg-[#9C9990] cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out choice" id="scissors">
+        <img src="../assets/sc.png" class="w-20 h-20 md:w-24 md:h-24 lg:h-36 lg:w-36 object-contain" />
+      </div>
+    </div>
+
+    <div class="bg-[#CFD2B2] grid grid-cols-2 mt-12 md:mt-16 gap-8 md:gap-16 lg:gap-24 mx-6 md:mx-12 lg:mx-24 border-2 rounded-2xl nunito-extrabold py-4">
+      <div class="text-center">
+        <h3 class="font-bold text-2xl md:text-3xl mb-2">User</h3>
+        <p id="user-score" class="text-lg md:text-xl">0</p>
+      </div>
+      <div class="text-center">
+        <h3 class="font-bold text-2xl md:text-3xl mb-2">Computer</h3>
+        <p id="computer-score" class="text-lg md:text-xl">0</p>
+      </div>
+    </div>
+    
+    <div class="mt-8 md:mt-12 flex flex-col items-center gap-4 mozilla-headline-medium">
+      <h3 id="result" class="border-4 px-6 py-3 rounded-2xl text-center text-lg md:text-xl">Play Your Move</h3>
+      <h2 id="final-result" class="text-xl md:text-2xl font-bold"></h2>
+      <button type="submit" id="play-again" class="cursor-pointer border-2 px-6 py-2 rounded-2xl bg-amber-700 text-white hover:bg-amber-800 transition-colors hidden">Play Again</button>
+    </div>
+  </section>
+  
+  <script src="../gameLogic.js"></script>
+</body>
 </html>
